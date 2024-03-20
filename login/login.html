@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>U-MONSTER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <nav>
+      <img onclick="window.location.href='../index.html'" src="../images/logo_d.png" alt="" />
+      <div class="navigation">
+        <ul>
+          <i id="menu-close" class="fas fa-times"></i>
+          <li><a href="about.html">關於有怪獸</a></li>
+          <li><a href="blog.html">知識專欄</a></li>
+          <li><a href="course.html">服務項目</a></li>
+          <li><a href="#">期間限定</a></li>
+          <li><a href="contact.html">聯絡我們</a></li>
+          <li class="dropdown">
+            <a class="blue">會員登入</a>
+            <div class="dropdown-content">
+              <a href="#">選項 1</a>
+              <a href="#">選項 2</a>
+              <a href="#">選項 3</a>
+            </div>
+          </li>
+        </ul>
+        <img id="menu-btn" src="../images/menu.png" alt="" />
+      </div>
+    </nav>
+
+    <div>123456789456123</div>
+
+    <footer>
+      <div class="footer-col">
+        <h3>logo</h3>
+        <li>關於我們</li>
+        <li>知識專欄</li>
+        <li>服務項目</li>
+        <li>期間限定</li>
+      </div>
+      <div class="footer-col">
+        <h3>主要項目</h3>
+        <li>關於我們</li>
+        <li>知識專欄</li>
+        <li>服務項目</li>
+        <li>期間限定</li>
+      </div>
+      <div class="footer-col">
+        <h3>其他連結</h3>
+        <li>會員登入</li>
+        <li>聯絡我們</li>
+        <li>怪獸商城</li>
+      </div>
+      <div class="footer-col">
+        <h3>聯絡資訊</h3>
+        <li>Guides</li>
+        <li>Research</li>
+        <li>Experts</li>
+        <li>Marketing Service</li>
+      </div>
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p>You can trust us. we only send promo offers,</p>
+        <div class="subscribe">
+          <input type="text" name="" placeholder="Your Email Address" id="" />
+          <a class="yellow" href="#">SUBSCRIBE</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright ©2024 All rights reserved | U-MONSTER</p>
+        <div class="pro-link">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      $('#menu-btn').click(function () {
+        $('nav .navigation ul').addClass('active');
+      });
+      $('#menu-close').click(function () {
+        $('nav .navigation ul').removeClass('active');
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $('.dropdown').click(function () {
+          $(this).find('.dropdown-content').toggleClass('show');
+        });
+
+        $(window).click(function (event) {
+          if (!event.target.matches('.dropdown')) {
+            $('.dropdown-content').removeClass('show');
+          }
+        });
+      });
+    </script>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
